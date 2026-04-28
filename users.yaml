@@ -1,0 +1,114 @@
+# =============================================================================
+# users.yaml  —  SINGLE SOURCE OF TRUTH for all user/account configuration
+# =============================================================================
+#
+# FIELD DESCRIPTIONS:
+#   username          : unique key used in Redis and dashboard
+#   dma               : folder name under Risk_dashboard_inputs/
+#   userfolder        : subfolder (legacy)
+#   tradebook_prefix  : filename prefix → prefix_YYYY-MM-DD.csv
+#   symbol_format     : "spaced"  → BANKNIFTY 28APR2026 CE 51300
+#                       "compact" → NIFTY2640722650CE
+#   col_symbol        : column name for trading symbol
+#   col_qty           : column name for quantity
+#   col_price         : column name for price
+#   col_side          : column name for BUY/SELL side
+#   col_tag           : column name for strategy tag
+#   mock_intraday_dir : folder name under Risk_dashboard_inputs/ for intraday mock DB
+#                       default: "mock_{dma}"  → e.g. mock_DMA09
+#   mock_positional_dir: folder name for positional mock DB
+#                       default: "mock_{dma}_P" → e.g. mock_DMA09_P
+# =============================================================================
+
+users:
+  - username: "DMA16"
+    dma: "DMA16"
+    userfolder: "out"
+    tradebook_prefix: "tradebook_T611"
+    symbol_format: "spaced"
+    col_symbol: "TradingSymbol"
+    col_qty: "LastTradedQuantity"
+    col_price: "OrderAverageTradedPrice"
+    col_side: "OrderSide"
+    col_tag: "OrderUniqueIdentifier"
+    mock_intraday_dir: "mock_DMA16"
+    mock_positional_dir: "mock_DMA16_P"
+
+  - username: "DMA19"
+    dma: "DMA19"
+    userfolder: "out_s2"
+    tradebook_prefix: "tradebook_T611"
+    symbol_format: "spaced"
+    col_symbol: "TradingSymbol"
+    col_qty: "LastTradedQuantity"
+    col_price: "OrderAverageTradedPrice"
+    col_side: "OrderSide"
+    col_tag: "OrderUniqueIdentifier"
+    mock_intraday_dir: "mock_DMA19"
+    mock_positional_dir: "mock_DMA19_P"
+
+  - username: "DMA09"
+    dma: "DMA09"
+    userfolder: "out_rk"
+    tradebook_prefix: "tradebook_T611"
+    symbol_format: "spaced"
+    col_symbol: "TradingSymbol"
+    col_qty: "LastTradedQuantity"
+    col_price: "OrderAverageTradedPrice"
+    col_side: "OrderSide"
+    col_tag: "OrderUniqueIdentifier"
+    mock_intraday_dir: "mock_DMA09"
+    mock_positional_dir: "mock_DMA09_P"
+
+  - username: "DMA20"
+    dma: "DMA20"
+    userfolder: "out_rk"
+    tradebook_prefix: "tradebook_T611"
+    symbol_format: "spaced"
+    col_symbol: "TradingSymbol"
+    col_qty: "LastTradedQuantity"
+    col_price: "OrderAverageTradedPrice"
+    col_side: "OrderSide"
+    col_tag: "OrderUniqueIdentifier"
+    mock_intraday_dir: "mock_DMA20"
+    mock_positional_dir: "mock_DMA20_P"
+
+  - username: "QSCT10"
+    dma: "QSCT10"
+    userfolder: "out_qsct10"
+    tradebook_prefix: "tradebook_QI_TECK"
+    symbol_format: "compact"
+    col_symbol: "TradingSymbol"
+    col_qty: "LastTradedQuantity"
+    col_price: "LastTradedPrice"
+    col_side: "OrderSide"
+    col_tag: "OrderUniqueIdentifier"
+    mock_intraday_dir: "QMOCK1"
+    mock_positional_dir: "QMOCK2"
+
+  - username: "QSCT10_BSE"
+    dma: "QSCT10_BSE"
+    userfolder: "out_qsct10_bse"
+    tradebook_prefix: "tradebook_QI_TECK"
+    symbol_format: "compact"
+    col_symbol: "TradingSymbol"
+    col_qty: "LastTradedQuantity"
+    col_price: "LastTradedPrice"
+    col_side: "OrderSide"
+    col_tag: "OrderUniqueIdentifier"
+    mock_intraday_dir: "QMOCK_BSE1"
+    mock_positional_dir: "QMOCK_BSE2"
+
+# ---- ADD NEW USER BELOW THIS LINE ----
+# - username: "NEW_USER"
+#   dma: "NEW_USER"
+#   userfolder: "out_new"
+#   tradebook_prefix: "tradebook_T611"      # change if filename prefix differs
+#   symbol_format: "spaced"                  # "spaced" or "compact"
+#   col_symbol: "TradingSymbol"
+#   col_qty: "LastTradedQuantity"
+#   col_price: "OrderAverageTradedPrice"     # or "LastTradedPrice"
+#   col_side: "OrderSide"
+#   col_tag: "OrderUniqueIdentifier"
+#   mock_intraday_dir: "mock_NEW_USER"       # folder name under Risk_dashboard_inputs/
+#   mock_positional_dir: "mock_NEW_USER_P"

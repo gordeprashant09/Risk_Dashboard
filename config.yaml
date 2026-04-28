@@ -1,0 +1,10 @@
+-
+ name: zerodha
+ config:
+  api_key: 4tl671rr7bwffw7b
+  secret: 4gesk7v5vsbx9us4t8j3gh229zwzwf9t 
+  user_id: QWK225
+  password: Dec2025!
+  PIN: 123456
+  totp: VV2ZTNC3LG4V7EG7ECFLJIURPGVERJL7 
+-
